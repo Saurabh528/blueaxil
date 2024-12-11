@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-dark-950 text-gray-100;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-accent-400;
+  }
+  
+  .glass-card {
+    @apply bg-dark-900/50 backdrop-blur-lg border border-dark-800 rounded-xl;
+  }
+  
+  .grid-background {
+    background-size: 50px 50px;
+    background-image: linear-gradient(to right, #1c1c21 1px, transparent 1px),
+                     linear-gradient(to bottom, #1c1c21 1px, transparent 1px);
+  }
+}
+
+.glow {
+  box-shadow: 0 0 50px -12px theme('colors.primary.500');
+}
+
+.glow-accent {
+  box-shadow: 0 0 50px -12px theme('colors.accent.500');
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: theme('borderRadius.xl');
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, 
+    theme('colors.primary.500'), 
+    theme('colors.accent.500')
+  );
+  border-radius: inherit;
+  z-index: -1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-dark-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-dark-600;
+}

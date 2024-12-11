@@ -1,0 +1,5 @@
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="250" cy="250" r="250" fill="#1B365D"/>
+  <path d="M150 150 L350 150 L350 350 L150 350 Z" fill="#F59E0B"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Arial" font-size="120" fill="white">BA</text>
+</svg>
